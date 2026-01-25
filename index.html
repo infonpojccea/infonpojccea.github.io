@@ -6,9 +6,31 @@
 </head>
 
 <body style="font-family: Arial, sans-serif; margin:0;">
-
-<!-- トップ見出し（背景画像） -->
+  <!-- 上部固定メニュー -->
 <div style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 999;
+">
+
+  <a href="index.html">首页</a> ｜ 
+  <a href="about.html">团体概要</a> ｜ 
+  <a href="#">主要业务</a> ｜ 
+  <a href="#">通知・活动</a> ｜ 
+  <a href="#">加入会员</a> ｜ 
+  <a href="#">联系我们</a> ｜ 
+  <a href="#">信息公开</a>
+
+</div>
+
+<div style="
+  margin-top: 60px;
   background-image: url('images/top1.jpg');
   background-size: cover;
   background-position: center;
@@ -16,12 +38,13 @@
   padding: 100px 40px;
 ">
 
+
   <div style="
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;
-    background-color: rgba(0,0,0,0.45);
+   background-color: rgba(0,0,0,0.25);
     padding: 40px;
   ">
 
