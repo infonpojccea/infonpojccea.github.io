@@ -2,177 +2,196 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>日中文化交流协会</title>
-</head>
+  <title>首页｜日中文化交流协会</title>
 
-<body style="font-family: Arial, sans-serif; margin:0;">
- <!-- 上部固定メニュー -->
-<div style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-  text-align: center;
-  z-index: 999;
-">
+  <style>
+  /* ===== 基本設定 ===== */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.8;
+  }
 
-  <a href="index.html">首页</a> ｜ 
-　<a href="about.html">团体概要</a> ｜ 
-　<a href="business.html">主要业务</a> ｜ 
-　<a href="news.html">通知・活动</a> ｜ 
-　<a href="join.html">加入会员</a> ｜ 
-　<a href="contact.html">联系我们</a> ｜ 
-　<a href="info.html">信息公开</a>
+  a { text-decoration: none; color: #333; }
 
+  /* ===== 共通ヘッダー ===== */
+  .site-header { width: 100%; }
 
-</div>
-
-  
-
-<div style="
-  margin-top: 60px;
-  background-image: url('images/top1.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 40px;
-">
-
-
-  <div style="
+  .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
-   background-color: rgba(0,0,0,0.25);
-    padding: 40px;
-  ">
+    padding: 15px 30px;
+    background: #ffffff;
+  }
 
-    <!-- 左：ロゴ -->
-    <div>
-      <img src="images/logo.png" width="140">
+  .logo {
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  nav a {
+    margin-right: 15px;
+    font-weight: bold;
+  }
+
+  /* ===== トップ画像 ===== */
+  .hero {
+    background: url("images/top1.jpg") center / cover no-repeat;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+  }
+
+  .hero-text {
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    padding: 20px 30px;
+  }
+
+  .org-type { font-size: 14px; }
+  .catch { font-size: 16px; }
+
+  /* ===== セクション共通 ===== */
+  .section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .section h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  /* ===== 画像レイアウト ===== */
+  .flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .flex img {
+    width: 100%;
+    height: auto;
+  }
+
+  .col-6 { width: 48%; }
+  .col-4 { width: 32%; }
+
+  /* ===== フッター ===== */
+  footer {
+    background: #f0f0f0;
+    padding: 30px;
+    margin-top: 60px;
+  }
+
+  .footer-box {
+    display: flex;
+    gap: 40px;
+  }
+
+  .footer-box img {
+    width: 80px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin-bottom: 8px;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== ヘッダー ===== -->
+<header class="site-header">
+
+  <div class="nav-bar">
+    <img src="images/logo.png" class="logo">
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="about.html">团体概要</a>
+      <a href="business.html">主要业务</a>
+      <a href="news.html">通知・活动</a>
+      <a href="join.html">加入会员</a>
+      <a href="contact.html">联系我们</a>
+      <a href="info.html">信息公开</a>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <div class="hero-text">
+      <p class="org-type">特定非营利活动法人</p>
+      <h1>日中文化交流协会</h1>
+      <p class="catch">
+        促进中日文化交流<br>
+        共建理解与共生的桥梁
+      </p>
     </div>
+  </div>
 
-    <!-- 中央：法人名（上下） -->
-    <div style="text-align:center;">
-      <div style="font-size:14px;">
-        特定非营利活动法人
-      </div>
-      <div style="font-size:32px; font-weight:bold; margin-top:10px;">
-        日中文化交流协会
-      </div>
+</header>
+
+<!-- ===== 设立宗旨 ===== -->
+<div class="section">
+  <h2>协会设立宗旨</h2>
+  <div class="flex">
+    <div class="col-6">
+      <img src="images/top03.jpg">
     </div>
-
-    <!-- 右：キャッチコピー -->
-    <div style="font-size:18px; line-height:1.8;">
-      促进中日文化交流<br>
-      共建理解与共生的桥梁
+    <div class="col-6">
+      <p>
+        本协会以促进中日两国在文化、教育、医疗等领域的民间交流为宗旨，
+        通过多样化的交流活动，加深理解，推动共生社会的构建。
+      </p>
     </div>
-
   </div>
 </div>
 
-  <!-- 団体紹介 -->
-  <div style="max-width:800px; margin:auto; font-size:16px; line-height:1.8;">
-    <p>
-      特定非营利活动法人日中文化交流协会，  
-      以促进中日两国文化、教育及民间交流为宗旨，  
-      致力于构建相互理解、尊重与共生的友好关系。
-    </p>
-
-    <p>
-      本协会通过文化交流活动、研修项目、讲座及访问交流等方式，  
-      推动中日社会各界的长期合作与交流发展。
-    </p>
+<!-- ===== 活动展示 ===== -->
+<div class="section">
+  <div class="flex">
+    <div class="col-4"><img src="images/top4.jpg"></div>
+    <div class="col-4"><img src="images/top5.jpg"></div>
+    <div class="col-4"><img src="images/top6.jpg"></div>
   </div>
-
-  <!-- ナビゲーション -->
-  <div style="text-align:center; margin:40px 0;">
-    <a href="about.html">团体概要</a> ｜ 
-    <a href="#">主要业务</a> ｜ 
-    <a href="#">通知・活动</a> ｜ 
-    <a href="#">加入会员</a> ｜ 
-    <a href="#">联系我们</a> ｜ 
-    <a href="#">信息公开</a>
-  </div>
-
- <!-- フッター -->
-<div style="
-  background:#f5f5f5;
-  padding:30px;
-  font-size:14px;
-  text-align:center;
-  color:#555;
-">
-
-  <p>
-    特定非营利活动法人 日中文化交流协会
-  </p>
-
-  <p>
-    联系邮箱：info.npojccea@gmail.com
-  </p>
-
-  <p>
-    © NPOJCCEA All Rights Reserved
-  </p>
-
 </div>
 
-<!-- フッター -->
-<div style="
-  background:#f5f5f5;
-  padding:40px 20px;
-  margin-top:60px;
-  font-size:14px;
-  color:#333;
-">
+<!-- ===== 我们的愿景 ===== -->
+<div class="section">
+  <h2>我们的愿景</h2>
+  <div class="flex">
+    <div class="col-6"><img src="images/top7.jpg"></div>
+    <div class="col-6"><img src="images/top8.jpg"></div>
+  </div>
+</div>
 
-  <div style="
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    gap:60px;
-    max-width:1100px;
-    margin:auto;
-  ">
+<div class="section">
+  <div class="flex">
+    <div class="col-6"><img src="images/top9.jpg"></div>
+    <div class="col-6"><img src="images/top10.jpg"></div>
+  </div>
+</div>
 
-    <!-- 左：ロゴ -->
+<!-- ===== フッター ===== -->
+<footer>
+  <div class="footer-box">
+    <img src="images/logo.png">
     <div>
-      <img src="images/logo.png" width="80">
-    </div>
-
-    <!-- 中央：法人情報 -->
-    <div style="line-height:1.8;">
       <strong>特定非营利活动法人 日中文化交流协会</strong><br>
-      地址：日本国千葉県千葉市中央区白旗1-7-12<br>
-      电话：+81-43-307-8671<br>
+      日本<br>
       邮箱：info.npojccea@gmail.com<br>
-      官网：
-      <a href="https://www.npojccea.org" target="_blank">
-        https://www.npojccea.org
-      </a>
+      https://www.npojccea.org
     </div>
-
-  <!-- 右：横並びリンク -->
-<div style="
-  line-height:2;
-  white-space:nowrap;
-">
-
-  <a href="join.html">入会案内</a>
-  <span style="margin:0 10px;">｜</span>
-
-  <a href="contact.html">联系我们</a>
-  <span style="margin:0 10px;">｜</span>
-
-  <a href="news.html">通知・活动</a>
-
-</div>
-
+    <div class="footer-links">
+      <a href="join.html">入会案内</a>
+      <a href="contact.html">联系我们</a>
+      <a href="news.html">通知・活动</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
