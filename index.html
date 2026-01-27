@@ -24,10 +24,10 @@
     background: #ffffff;
   }
 
-  .logo.jpg{
-    height: 40px;
-    margin-right: 20px;
-  }
+ .logo {
+  height: 113px;
+}
+
 
   nav a {
     margin-right: 15px;
@@ -114,40 +114,40 @@ nav a.active {
   color: #c00000;       /* 赤系（好みで変更OK） */
   border-bottom: 2px solid #c00000;
 }
+/* ===== 現在ページのメニュー色 ===== */
+nav a.active {
+  color: #c00000;       /* 赤系（好みで変更OK） */
+  border-bottom: 2px solid #c00000;
+}
 
   </style>
 </head>
 
 <body>
 
-<!-- ===== ヘッダー ===== -->
 <header class="site-header">
-
   <div class="nav-bar">
-    <img src="images/logo.jpg" class="logo.jpg">
-  <nav>
-  <a href="index.html" class="active">首页</a>
-  <a href="about.html">团体概要</a>
-  <a href="business.html">主要业务</a>
-  <a href="news.html">通知・活动</a>
-  <a href="join.html">加入会员</a>
-  <a href="contact.html">联系我们</a>
-  <a href="info.html">信息公开</a>
-</nav>
 
-  </div>
+    <div class="logo-area">
+      <img src="images/logo.jpg" class="logo" alt="ロゴ">
 
-  <div class="hero">
-    <div class="hero-text">
-      <p class="org-type">特定非营利活动法人</p>
-      <h1>日中文化交流协会</h1>
-      <p class="catch">
-        促进中日文化交流<br>
-        共建理解与共生的桥梁
-      </p>
+      <div class="org-name">
+        <div class="org-top">特定非営利活動法人</div>
+        <div class="org-bottom">日中文化交流協会</div>
+      </div>
     </div>
-  </div>
 
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="about.html">团体概要</a>
+      <a href="business.html">主要业务</a>
+      <a href="news.html">通知・活动</a>
+      <a href="join.html">加入会员</a>
+      <a href="contact.html">联系我们</a>
+      <a href="info.html">信息公开</a>
+    </nav>
+
+  </div>
 </header>
 
 <!-- ===== 设立宗旨 ===== -->
