@@ -2,17 +2,16 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title> 联系我们｜日中文化交流协会</title>
+  <title>联系我们｜日中文化交流协会</title>
 
   <style>
-    /* ===== 基本設定 ===== */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.8;
     }
 
-    /* ===== ヘッダー ===== */
+    /* ===== 共通ヘッダー ===== */
     header {
       background: #ffffff;
       border-bottom: 1px solid #ddd;
@@ -24,26 +23,54 @@
       padding: 15px 30px;
     }
 
-   .logo {
-  height: 113px;
-}
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
 
+    .logo {
+      height: 113px; /* 約30mm */
+    }
+
+    .org-name {
+      margin-left: 12px;
+      line-height: 1.2;
+    }
+
+    .org-top {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .org-bottom {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      margin-left: auto;
+    }
 
     nav a {
-      margin-right: 15px;
+      margin-left: 18px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
 
-    /* ===== ページ見出し画像 ===== */
+    nav a.active {
+      color: #c00000;
+      border-bottom: 2px solid #c00000;
+    }
+
+    /* ===== 見出し画像 ===== */
     .hero {
       height: 280px;
-      background: #ccc;
+      background: url("images/dongjingwan.jpg") center / cover no-repeat;
       display: flex;
       align-items: center;
       padding-left: 50px;
-      color: white;
+      color: #fff;
       font-size: 28px;
       font-weight: bold;
     }
@@ -79,105 +106,44 @@
       color: #333;
       text-decoration: none;
     }
-      /* ===== ナビゲーションを右寄せ ===== */
-.nav-bar {
-  display: flex;
-  align-items: center;
-}
-
-nav {
-  margin-left: auto;
-}
-    /* ===== 現在ページのメニュー色 ===== */
-nav a.active {
-  color: #c00000;       /* 赤系（好みで変更OK） */
-  border-bottom: 2px solid #c00000;
-}
-/* ===== ヘッダー構成 ===== */
-.nav-bar {
-  display: flex;
-  align-items: center;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 113px;   /* 30mm相当 */
-}
-
-.org-name {
-  margin-left: 12px;
-  line-height: 1.2;
-}
-
-.org-top {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.org-bottom {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* ===== メニュー右寄せ ===== */
-nav {
-  margin-left: auto;
-}
-
-nav a {
-  margin-left: 18px;
-  font-weight: bold;
-}
-
   </style>
 </head>
 
 <body>
-<header class="site-header">
-  <div class="nav-bar">
 
-    <div class="logo-area">
-      <img src="images/logo.jpg" class="logo" alt="ロゴ">
-
-      <div class="org-name">
-        <div class="org-top">特定非営利活動法人</div>
-        <div class="org-bottom">日中文化交流協会</div>
-      </div>
-    </div>
-<!-- ===== ヘッダー ===== -->
 <header>
   <div class="nav-bar">
-    <img src="images/logo.jpg" class="logo">
- <nav>
-  <a href="index.html" class="active">联系我们</a>
-  <a href="about.html">团体概要</a>
-  <a href="business.html">主要业务</a>
-  <a href="news.html">通知・活动</a>
-  <a href="join.html">加入会员</a>
-  <a href="contact.html">联系我们</a>
-  <a href="info.html">信息公开</a>
-</nav>
+    <div class="logo-area">
+      <img src="images/logo.jpg" class="logo" alt="logo">
+      <div class="org-name">
+        <div class="org-top">特定非営利活動法人</div>
+        <div class="org-bottom">日中文化交流协会</div>
+      </div>
+    </div>
 
+    <nav>
+      <a href="index.html">联系我们</a>
+      <a href="about.html">团体概要</a>
+      <a href="business.html">主要业务</a>
+      <a href="news.html">通知・活动</a>
+      <a href="join.html">加入会员</a>
+      <a href="contact.html" class="active">联系我们</a>
+      <a href="info.html">信息公开</a>
+    </nav>
   </div>
 
   <div class="hero">
-     联系我们
+    联系我们
   </div>
 </header>
 
-<!-- ===== 本文 ===== -->
-<div class="contact">
+<div class="container">
   <p>这里以后再写内容。</p>
 </div>
 
-<!-- ===== フッター ===== -->
 <footer>
   <div class="footer-box">
-    <img src="images/logo.jpg">
+    <img src="images/logo.jpg" alt="logo">
 
     <div>
       <strong>特定非营利活动法人 日中文化交流协会</strong><br>
