@@ -88,17 +88,71 @@
 nav {
   margin-left: auto;
 }
+    /* ===== ヘッダー構成 ===== */
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 113px;   /* 30mm相当 */
+}
+
+.org-name {
+  margin-left: 12px;
+  line-height: 1.2;
+}
+
+.org-top {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.org-bottom {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===== メニュー右寄せ ===== */
+nav {
+  margin-left: auto;
+}
+
+nav a {
+  margin-left: 18px;
+  font-weight: bold;
+}
+/* ===== 現在ページのメニュー色 ===== */
+nav a.active {
+  color: #c00000;       /* 赤系（好みで変更OK） */
+  border-bottom: 2px solid #c00000;
+}
+
   </style>
 </head>
 
 <body>
 
 <!-- ===== ヘッダー ===== -->
-<header>
+<header class="site-header">
   <div class="nav-bar">
-    <img src="images/logo.jpg" class="logo">
+
+    <div class="logo-area">
+      <img src="images/logo.jpg" class="logo" alt="ロゴ">
+
+      <div class="org-name">
+        <div class="org-top">特定非営利活動法人</div>
+        <div class="org-bottom">日中文化交流協会</div>
+      </div>
+    </div>
+
     <nav>
-      <a href="index.html">首页</a>
+       <a href="index.html" class="active">信息公开</a>
       <a href="about.html">团体概要</a>
       <a href="business.html">主要业务</a>
       <a href="news.html">通知・活动</a>
@@ -106,10 +160,7 @@ nav {
       <a href="contact.html">联系我们</a>
       <a href="info.html">信息公开</a>
     </nav>
-  </div>
 
-  <div class="hero">
-    信息公开
   </div>
 </header>
 
