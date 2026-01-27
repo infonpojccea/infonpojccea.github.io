@@ -2,84 +2,94 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title> 加入会员｜日中文化交流协会</title>
+  <title>加入我们｜日中文化交流协会</title>
 
   <style>
-    /* ===== 基本設定 ===== */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-    }
+  /* ===== 全体基本設定 ===== */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.8;
+  }
 
-    /* ===== ヘッダー ===== */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #ddd;
-    }
+  /* ===== 共通ヘッダー ===== */
+  .site-header {
+    width: 100%;
+  }
 
-    .nav-bar {
-      display: flex;
-      align-items: center;
-      padding: 15px 30px;
-    }
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+  }
 
-     .logo {
-   height: 113px;
-   }
+ .logo {
+  height: 113px;
+}
 
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
 
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+  /* ===== hero ===== */
+  .hero {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    background-size: cover;
+    background-position: center;
+  }
 
-    /* ===== ページ見出し画像 ===== */
-    .hero {
-      height: 280px;
-      background: #ccc;
-      display: flex;
-      align-items: center;
-      padding-left: 50px;
-      color: white;
-      font-size: 28px;
-      font-weight: bold;
-    }
+  .hero-text {
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    padding: 20px 30px;
+  }
 
-    /* ===== 本文 ===== */
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+  .org-type { font-size: 14px; }
+  .catch { font-size: 16px; }
 
-    /* ===== フッター ===== */
-    footer {
-      background: #f5f5f5;
-      padding: 30px;
-      margin-top: 60px;
-      font-size: 14px;
-    }
+  /* ===== 本文 ===== */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
 
-    .footer-box {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-    }
+  .container h1 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
 
-    .footer-box img {
-      width: 70px;
-    }
+  /* ===== フッター ===== */
+  footer {
+    background: #f0f0f0;
+    padding: 30px;
+    margin-top: 60px;
+  }
 
-    .footer-links a {
-      display: block;
-      margin-bottom: 8px;
-      color: #333;
-      text-decoration: none;
-    }
-      /* ===== ナビゲーションを右寄せ ===== */
+  .footer-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .footer-box img {
+    width: 80px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    text-decoration: none;
+  }
+    /* ===== ナビゲーションを右寄せ ===== */
 .nav-bar {
   display: flex;
   align-items: center;
@@ -88,7 +98,7 @@
 nav {
   margin-left: auto;
 }
-    /* ===== 現在ページのメニュー色 ===== */
+   /* ===== 現在ページのメニュー色 ===== */
 nav a.active {
   color: #c00000;       /* 赤系（好みで変更OK） */
   border-bottom: 2px solid #c00000;
@@ -137,6 +147,7 @@ nav a {
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="nav-bar">
 
@@ -148,42 +159,48 @@ nav a {
         <div class="org-bottom">日中文化交流協会</div>
       </div>
     </div>
-<!-- ===== ヘッダー ===== -->
-<header>
-  <div class="nav-bar">
-    <img src="images/logo.jpg" class="logo">
-  <nav>
-  <a href="index.html" class="active">加入我们</a>
-  <a href="about.html">团体概要</a>
-  <a href="business.html">主要业务</a>
-  <a href="news.html">通知・活动</a>
-  <a href="join.html">加入会员</a>
-  <a href="contact.html">联系我们</a>
-  <a href="info.html">信息公开</a>
-</nav>
+
+    <nav>
+      <a href="index.html" class="active">加入我们</a>
+      <a href="about.html">团体概要</a>
+      <a href="business.html">主要业务</a>
+      <a href="news.html">通知・活动</a>
+      <a href="join.html">加入会员</a>
+      <a href="contact.html">联系我们</a>
+      <a href="info.html">信息公开</a>
+    </nav>
 
   </div>
 
-  <div class="hero">
-  加入会员
-  </div>
-</header>
+ </header>
 
-<!-- ===== 本文 ===== -->
 <div class="container">
-  <p>这里以后再写内容。</p>
+  <h1>团体概要</h1>
+
+  <p>
+    特定非营利活动法人日中文化交流协会，
+    是以促进中日两国之间的文化、教育、医疗及民间交流为宗旨的非营利组织。
+  </p>
+
+  <p>
+    本协会致力于通过文化交流活动、研修项目、讲座、访问交流等多种形式，
+    加深中日两国人民之间的相互理解，推动友好合作关系的长期发展。
+  </p>
+
+  <p>
+    我们相信，民间交流是构建和平、理解与共生社会的重要基础，
+    并持续为中日两国社会的共同发展贡献力量。
+  </p>
 </div>
 
-<!-- ===== フッター ===== -->
 <footer>
   <div class="footer-box">
-    <img src="images/logo.jpg">
-
+    <img src="images/logo.jpg" alt="logo">
     <div>
       <strong>特定非营利活动法人 日中文化交流协会</strong><br>
       日本<br>
       邮箱：info.npojccea@gmail.com<br>
-      https://www.npojccea.org
+      网址：https://www.npojccea.org
     </div>
 
     <div class="footer-links">
