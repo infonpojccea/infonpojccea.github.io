@@ -5,106 +5,100 @@
   <title>团体概要｜日中文化交流协会</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.8;
-    }
+  /* ===== 全体基本設定 ===== */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.8;
+  }
 
-    /* ===== ヘッダー ===== */
-    .site-header {
-      width: 100%;
-    }
+  /* ===== 共通ヘッダー ===== */
+  .site-header {
+    width: 100%;
+  }
 
-    .nav-bar {
-      display: flex;
-      align-items: center;
-      padding: 15px 30px;
-      background: #ffffff;
-    }
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+  }
 
-    .logo {
-      height: 60px;
-      margin-right: 20px;
-    }
+  .logo {
+    height: 60px;
+    margin-right: 20px;
+  }
 
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
 
-    /* ===== トップ画像（日本語HP風） ===== */
-    .hero {
-   <div class="hero" style="background-image:url('images/2top.jpg');">
-      height: 320px;
-      display: flex;
-      align-items: center;
-      padding-left: 60px;
-    }
+  /* ===== hero ===== */
+  .hero {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    background-size: cover;
+    background-position: center;
+  }
 
-    .hero-text {
-      background: rgba(0,0,0,0.4);
-      color: #fff;
-      padding: 20px 30px;
-    }
+  .hero-text {
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    padding: 20px 30px;
+  }
 
-    .hero-text h1 {
-      margin: 10px 0;
-    }
+  .org-type { font-size: 14px; }
+  .catch { font-size: 16px; }
 
-    .org-type {
-      font-size: 14px;
-    }
+  /* ===== 本文 ===== */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
 
-    .catch {
-      font-size: 16px;
-    }
+  .container h1 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
 
-    /* ===== メイン ===== */
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+  /* ===== フッター ===== */
+  footer {
+    background: #f0f0f0;
+    padding: 30px;
+    margin-top: 60px;
+  }
 
-    .container h1 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-    }
+  .footer-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
 
-    /* ===== フッター ===== */
-    footer {
-      background: #f0f0f0;
-      padding: 30px;
-      margin-top: 60px;
-    }
+  .footer-box img {
+    width: 80px;
+  }
 
-    .footer-box {
-      display: flex;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .footer-box img {
-      width: 80px;
-    }
-
-    .footer-links a {
-      display: block;
-      margin-bottom: 8px;
-      color: #333;
-      text-decoration: none;
-    }
+  .footer-links a {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    text-decoration: none;
+  }
   </style>
 </head>
 
 <body>
 
 <header class="site-header">
+
   <div class="nav-bar">
-    <img src="images/logo.png" class="logo" alt="logo">
+    <img src="images/logo.png" class="logo">
     <nav>
       <a href="index.html">首页</a>
       <a href="about.html">团体概要</a>
@@ -116,7 +110,7 @@
     </nav>
   </div>
 
-  <div class="hero">
+  <div class="hero" style="background-image:url('images/2top.jpg');">
     <div class="hero-text">
       <p class="org-type">特定非营利活动法人</p>
       <h1>日中文化交流协会</h1>
@@ -126,6 +120,7 @@
       </p>
     </div>
   </div>
+
 </header>
 
 <div class="container">
@@ -150,7 +145,6 @@
 <footer>
   <div class="footer-box">
     <img src="images/logo.png" alt="logo">
-
     <div>
       <strong>特定非营利活动法人 日中文化交流协会</strong><br>
       日本<br>
@@ -168,6 +162,5 @@
 
 </body>
 </html>
-
 
 
