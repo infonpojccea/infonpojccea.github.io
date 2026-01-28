@@ -6,134 +6,38 @@
   <link rel="stylesheet" href="common.css">
 </head>
 
-  <style>
-  /* ===== 基本設定 ===== */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.8;
-  }
-
-  a { text-decoration: none; color: #333; }
-
-  /* ===== 共通ヘッダー ===== */
-  .site-header { width: 100%; }
-
-  .nav-bar {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    background: #ffffff;
-  }
-
- .logo {
-  height: 113px;
+<style>
+/* ===== 基本 ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
 }
 
+/* ===== ヘッダー ===== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
 
-  nav a {
-    margin-right: 15px;
-    font-weight: bold;
-  }
-
-  /* ===== トップ画像 ===== */
-  .hero {
-    background: url("images/top1.jpg") center / cover no-repeat;
-    height: 380px;
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-  }
-
-  .hero-text {
-    background: rgba(0,0,0,0.45);
-    color: #fff;
-    padding: 20px 30px;
-  }
-
-  .org-type { font-size: 14px; }
-  .catch { font-size: 16px; }
-
-  /* ===== セクション共通 ===== */
-  .section {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
-  }
-
-  .section h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-  }
-
-  /* ===== 画像レイアウト ===== */
-  .flex {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .flex img {
-    width: 100%;
-    height: auto;
-  }
-
-  .col-6 { width: 48%; }
-  .col-4 { width: 32%; }
-
-  /* ===== フッター ===== */
-  footer {
-    background: #f0f0f0;
-    padding: 30px;
-    margin-top: 60px;
-  }
-
-  .footer-box {
-    display: flex;
-    gap: 40px;
-  }
-
-  .footer-box img {
-    width: 80px;
-  }
-
-  .footer-links a {
-    display: block;
-    margin-bottom: 8px;
-  }
-      /* ===== ナビゲーションを右寄せ ===== */
+/* ナビ全体 */
 .nav-bar {
-  display: flex;
-  align-items: center;
+  display: flex;                 /* 横並び固定 */
+  align-items: center;           /* 高さ中央 */
+  padding: 15px 30px;
+  min-height: 120px;             /* 高さ固定 */
+  position: relative;
+  z-index: 1000;
 }
 
-nav {
-  margin-left: auto;
-}
-    /* ===== 現在ページのメニュー色 ===== */
-nav a.active {
-  color: #c00000;       /* 赤系（好みで変更OK） */
-  border-bottom: 2px solid #c00000;
-}
-/* ===== 現在ページのメニュー色 ===== */
-nav a.active {
-  color: #c00000;       /* 赤系（好みで変更OK） */
-  border-bottom: 2px solid #c00000;
-}
-    /* ===== ヘッダー構成 ===== */
-.nav-bar {
-  display: flex;
-  align-items: center;
-}
-
+/* ロゴ＋団体名 */
 .logo-area {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  height: 113px;   /* 30mm相当 */
+  height: 113px;
 }
 
 .org-name {
@@ -142,47 +46,99 @@ nav a.active {
 }
 
 .org-top {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .org-bottom {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
 }
 
-/* ===== メニュー右寄せ ===== */
+/* ===== メニュー ===== */
 nav {
-  margin-left: auto;
+  margin-left: auto;             /* 右寄せ */
+  display: flex;                 /* 横並び */
+  gap: 18px;                     /* 間隔固定 */
 }
 
 nav a {
-  margin-left: 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-bottom: 4px;           /* 下線用余白固定 */
+  border-bottom: 2px solid transparent;
+}
+
+/* 現在ページ */
+nav a.active {
+  color: #c00000;
+  border-bottom: 2px solid #c00000;
+}
+
+/* ===== 見出し画像 ===== */
+.hero {
+  height: 280px;
+  background: url("./images/top2.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  color: #fff;
+  font-size: 28px;
   font-weight: bold;
 }
-/* ===== ナビを安定させる（重要） ===== */
-.nav-bar {
-  display: flex;              /* 横並び固定 */
-  align-items: center;        /* 高さ中央揃え */
-  position: relative;         /* 重なり基準 */
-  z-index: 1000;              /* 最前面 */
+
+/* ===== 本文 ===== */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* メニュー全体 */
-nav {
-  margin-left: auto;          /* 右寄せ固定 */
-  display: flex;              /* 横並び */
-  gap: 18px;                  /* 間隔固定 */
+/* ===== フッター ===== */
+footer {
+  background: #f5f5f5;
+  padding: 30px;
+  margin-top: 60px;
+  font-size: 14px;
 }
 
-/* 各メニュー */
-nav a {
-  white-space: nowrap;        /* 折り返し防止 */
+.footer-box {
+  display: flex;
+  align-items: center;
   position: relative;
-  z-index: 1001;              /* クリック有効 */
 }
 
-  </style>
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left img {
+  width: 70px;
+}
+
+.footer-info {
+  margin-left: 15px;
+}
+
+/* フッターメニュー中央固定 */
+.footer-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 60px;
+}
+
+.footer-links a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
