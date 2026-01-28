@@ -6,150 +6,176 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       line-height: 1.8;
     }
 
     /* ===== 共通ヘッダー ===== */
-    .site-header { width:100%; }
+    header {
+      background: #ffffff;          /* 背景を白 */
+      border-bottom: 1px solid #ddd;/* 下に薄い線 */
+    }
 
     .nav-bar {
-      display:flex;
-      align-items:center;
-      padding:15px 30px;
-      background:#ffffff;
+      display: flex;               /* 横並び */
+      align-items: center;         /* 縦中央揃え */
+      padding: 15px 30px;
     }
 
-   .logo {
-  height: 113px;
-}
+    /* ロゴ＋団体名 */
+    .logo-area {
+      display: flex;               /* 横並び */
+      align-items: center;
+    }
 
+    .logo {
+      height: 113px;               /* 約30mm */
+    }
+
+    .org-name {
+      margin-left: 12px;           /* ロゴとの間隔 */
+      line-height: 1.2;
+    }
+
+    .org-top {
+      font-size: 16px;             /* 上段 */
+      font-weight: bold;
+    }
+
+    .org-bottom {
+      font-size: 26px;             /* 下段 */
+      font-weight: bold;
+    }
+
+    /* ナビ */
+    nav {
+      margin-left: auto;           /* 右寄せ */
+    }
 
     nav a {
-      margin-right:15px;
-      text-decoration:none;
-      color:#333;
-      font-weight:bold;
+      margin-left: 18px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
     }
 
-    /* ===== ページ別トップ画像 ===== */
+    nav a.active {
+      color: #c00000;              /* 現在ページ */
+      border-bottom: 2px solid #c00000;
+    }
+
+    /* ===== 見出し画像 ===== */
     .hero {
-      background: url("images/4top.jpg") center / cover no-repeat;
-      height: 320px;
-      display:flex;
-      align-items:center;
-      padding-left:60px;
+      height: 280px;
+      background: url("./images/3top.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      color: #fff;
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    .hero-text {
-      background: rgba(0,0,0,0.4);
-      color:#fff;
-      padding:20px 30px;
-    }
-
+    /* ===== 本文 ===== */
     .container {
-      max-width:900px;
-      margin:40px auto;
-      padding:0 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-/* ===== ナビゲーションを右寄せ ===== */
-.nav-bar {
-  display: flex;
-  align-items: center;
-}
 
-nav {
-  margin-left: auto;
-}
-/* ===== 現在ページのメニュー色 ===== */
-nav a.active {
-  color: #c00000;       /* 赤系（好みで変更OK） */
-  border-bottom: 2px solid #c00000;
-}
-/* ===== ヘッダー構成 ===== */
-.nav-bar {
-  display: flex;
-  align-items: center;
-}
+    /* ===== フッター ===== */
+    footer {
+      background: #f5f5f5;
+      padding: 30px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
 
-.logo-area {
-  display: flex;
-  align-items: center;
-}
+    .footer-box {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
 
-.logo {
-  height: 113px;   /* 30mm相当 */
-}
+    .footer-left {
+      display: flex;
+      align-items: center;
+    }
 
-.org-name {
-  margin-left: 12px;
-  line-height: 1.2;
-}
+    .footer-left img {
+      width: 70px;
+    }
 
-.org-top {
-  font-size: 14px;
-  font-weight: bold;
-}
+    .footer-info {
+      margin-left: 15px;
+    }
 
-.org-bottom {
-  font-size: 24px;
-  font-weight: bold;
-}
+    .footer-links {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 60px;
+    }
 
-/* ===== メニュー右寄せ ===== */
-nav {
-  margin-left: auto;
-}
-
-nav a {
-  margin-left: 18px;
-  font-weight: bold;
-}
-
+    .footer-links a {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
   </style>
-  
 </head>
+
 <body>
-<header class="site-header">
+
+<header>
   <div class="nav-bar">
-
     <div class="logo-area">
-      <img src="images/logo.jpg" class="logo" alt="ロゴ">
-
+      <a href="index.html">
+        <img src="images/logo.jpg" class="logo" alt="logo">
+      </a>
       <div class="org-name">
-        <div class="org-top">特定非営利活動法人</div>
-        <div class="org-bottom">日中文化交流協会</div>
+        <div class="org-top">特定非营利活动法人</div>
+        <div class="org-bottom">日中文化交流协会</div>
       </div>
     </div>
 
     <nav>
       <a href="index.html">首页</a>
-      <a href="about.html">团体概要</a>
+      <a href="about.html" class="active">团体概要</a>
       <a href="business.html">主要业务</a>
       <a href="news.html">通知・活动</a>
       <a href="join.html">加入会员</a>
-      <a href="contact.html">联系我们</a>
       <a href="info.html">信息公开</a>
     </nav>
+  </div>
 
+  <div class="hero">
+    主要业务
   </div>
 </header>
 
-<!-- 🔽 ここからが「そのページだけの中身」 -->
 <div class="container">
-  <p>这里将介绍本协会的主要业务内容。</p>
-  
-<!-- ===== フッター ===== -->
+  <h2>主要业务</h2>
+  <p>这里写团体介绍内容。</p>
+</div>
+
 <footer>
   <div class="footer-box">
-    <img src="images/logo.jpg">
-    <div>
-      <strong>特定非营利活动法人 日中文化交流协会</strong><br>
-      日本<br>
-      邮箱：info.npojccea@gmail.com<br>
-      https://www.npojccea.org
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="logo">
+      </a>
+      <div class="footer-info">
+        <strong>特定非营利活动法人 日中文化交流协会</strong><br>
+        日本<br>
+        邮箱：info.npojccea@gmail.com<br>
+        https://www.npojccea.org
+      </div>
     </div>
+
     <div class="footer-links">
       <a href="join.html">入会案内</a>
       <a href="contact.html">联系我们</a>
@@ -160,3 +186,4 @@ nav a {
 
 </body>
 </html>
+
