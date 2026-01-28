@@ -13,62 +13,69 @@
 
     /* ===== 共通ヘッダー ===== */
     header {
-      background: #ffffff;          /* 背景を白 */
-      border-bottom: 1px solid #ddd;/* 下に薄い線 */
+      background: #ffffff;            /* 背景白 */
+      border-bottom: 1px solid #ddd;  /* 下線 */
     }
 
+    /* ヘッダー全体 */
     .nav-bar {
-      display: flex;               /* 横並び */
-      align-items: center;         /* 縦中央揃え */
+      display: flex;                 /* 横並び固定 */
+      align-items: center;           /* 縦中央 */
       padding: 15px 30px;
+      position: relative;            /* 重なり基準 */
+      z-index: 1000;
     }
 
     /* ロゴ＋団体名 */
     .logo-area {
-      display: flex;               /* 横並び */
+      display: flex;
       align-items: center;
+      flex-shrink: 0;                /* 縮まない */
     }
 
     .logo {
-      height: 113px;               /* 約30mm */
+      height: 113px;
     }
 
     .org-name {
-      margin-left: 12px;           /* ロゴとの間隔 */
+      margin-left: 12px;
       line-height: 1.2;
     }
 
     .org-top {
-      font-size: 16px;             /* 上段 */
+      font-size: 16px;
       font-weight: bold;
     }
 
     .org-bottom {
-      font-size: 26px;             /* 下段 */
+      font-size: 26px;
       font-weight: bold;
     }
 
-    /* ナビ */
+    /* ===== ナビゲーション（完全安定版） ===== */
     nav {
-      margin-left: auto;           /* 右寄せ */
+      margin-left: auto;             /* 右寄せ固定 */
+      display: flex;
+      gap: 18px;                     /* 間隔固定 */
     }
 
     nav a {
-      margin-left: 18px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
+      white-space: nowrap;           /* 折り返し防止 */
     }
 
     nav a.active {
-      color: #c00000;              /* 現在ページ */
+      color: #c00000;
       border-bottom: 2px solid #c00000;
+      padding-bottom: 4px;
     }
 
     /* ===== 見出し画像 ===== */
     .hero {
       height: 280px;
-      background: url("./images/3top.jpg") center / cover no-repeat;
+      background: url("images/4top.jpg") center / cover no-repeat;
       display: flex;
       align-items: center;
       padding-left: 50px;
@@ -98,6 +105,7 @@
       position: relative;
     }
 
+    /* 左：ロゴ＋情報 */
     .footer-left {
       display: flex;
       align-items: center;
@@ -111,6 +119,7 @@
       margin-left: 15px;
     }
 
+    /* 中央：メニュー */
     .footer-links {
       position: absolute;
       left: 50%;
@@ -126,34 +135,13 @@
       text-decoration: none;
     }
   </style>
-  /* ===== ナビを安定させる（重要） ===== */
-.nav-bar {
-  display: flex;              /* 横並び固定 */
-  align-items: center;        /* 高さ中央揃え */
-  position: relative;         /* 重なり基準 */
-  z-index: 1000;              /* 最前面 */
-}
-
-/* メニュー全体 */
-nav {
-  margin-left: auto;          /* 右寄せ固定 */
-  display: flex;              /* 横並び */
-  gap: 18px;                  /* 間隔固定 */
-}
-
-/* 各メニュー */
-nav a {
-  white-space: nowrap;        /* 折り返し防止 */
-  position: relative;
-  z-index: 1001;              /* クリック有効 */
-}
-
 </head>
 
 <body>
 
 <header>
   <div class="nav-bar">
+
     <div class="logo-area">
       <a href="index.html">
         <img src="images/logo.jpg" class="logo" alt="logo">
@@ -167,26 +155,26 @@ nav a {
     <nav>
       <a href="index.html">首页</a>
       <a href="about.html">团体概要</a>
-      <a href="contact.html" class="active">主要业务</a>
+      <a href="business.html" class="active">主要业务</a>
       <a href="news.html">通知・活动</a>
       <a href="join.html">加入会员</a>
-      <a href="about.html">联系我们</a>
+      <a href="contact.html">联系我们</a>
       <a href="info.html">信息公开</a>
     </nav>
+
   </div>
 
-  <div class="hero">
-    主要业务
-  </div>
+  <div class="hero">主要业务</div>
 </header>
 
 <div class="container">
   <h2>主要业务</h2>
-  <p>这里填内容</p>
+  <p>这里填写主要业务内容。</p>
 </div>
 
 <footer>
   <div class="footer-box">
+
     <div class="footer-left">
       <a href="index.html">
         <img src="images/logo.jpg" alt="logo">
@@ -204,6 +192,7 @@ nav a {
       <a href="contact.html">联系我们</a>
       <a href="news.html">通知・活动</a>
     </div>
+
   </div>
 </footer>
 
