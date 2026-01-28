@@ -127,4 +127,21 @@ footer {
   display: flex;
   gap: 60px;
 }
+/* ===== ロゴ＋団体名：横並びを強制 ===== */
+.logo-area {
+  display: flex;
+  align-items: center;
+  flex-direction: row !important;
+}
+
+.logo {
+  height: 113px;
+  flex-shrink: 0;
+}
+
+.org-name {
+  margin-left: 12px;
+  line-height: 1.2;
+}
+
 
