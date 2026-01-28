@@ -1,31 +1,65 @@
-/* ===== 全ページ共通：ナビ安定化 ===== */
+/* ===== 全ページ共通 ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+}
+
+/* ===== ヘッダー ===== */
 .site-header {
   width: 100%;
 }
 
-.nav-bar {
-/* ===== ナビ（全ページ共通・広め配置）===== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== ナビバー（全ページ完全統一）===== */
 .nav-bar {
   display: flex;
   align-items: center;
-  padding: 20px 40px;     /* ← 全体に余裕を出す */
-  min-height: 130px;      /* ← 高さを少し大きく */
+  padding: 20px 40px;     /* 余裕ある配置 */
+  min-height: 130px;      /* 高さ固定でブレ防止 */
+  position: relative;
+  z-index: 1000;
 }
 
+/* ロゴ＋団体名 */
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 113px;
+}
+
+.org-name {
+  margin-left: 12px;
+  line-height: 1.2;
+}
+
+.org-top {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.org-bottom {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ===== メニュー（これだけが正）===== */
 nav {
   margin-left: auto;
   display: flex;
-  gap: 28px;              /* ← メニュー間隔を広げる（重要） */
-}
-
-nav {
-  display: flex;
-  gap: 18px;
+  gap: 28px;              /* 広めで安定 */
   flex-shrink: 0;
 }
 
 nav a {
-  font-size: 18px;        /* ← 16px → 18px に */
+  font-size: 18px;        /* 全ページ同一 */
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -34,34 +68,40 @@ nav a {
   border-bottom: 2px solid transparent;
 }
 
-
 nav a.active {
+  color: #c00000;
   border-bottom: 2px solid #c00000;
 }
 
-/* ===== 画像巨大化防止 ===== */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ===== 見出し画像 共通 ===== */
+/* ===== 見出し画像（共通ルール）===== */
 .hero {
   width: 100%;
   display: flex;
   align-items: center;
+  padding-left: 50px;
   color: #fff;
+  font-size: 28px;
   font-weight: bold;
   background-position: center;
   background-size: cover;
+  position: relative;
+  z-index: 1;
 }
 
-/* トップページだけ大きく */
+/* トップページだけ大きい */
 .home .hero {
   height: 380px;
 }
 
-/* それ以外のページ */
+/* その他ページ */
 .page .hero {
   height: 220px;
 }
+
+/* ===== 画像暴走防止（全ページ）===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
