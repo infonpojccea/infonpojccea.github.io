@@ -87,26 +87,25 @@
       font-size: 14px;
     }
 
-    .footer-box {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-    }
-
-    .footer-box img {
-      width: 70px;
-    }
-
-　.footer-links {
+.footer-box {
   display: flex;
-  gap: 20px;   /* 横の間隔 */
- margin-left: auto;   /* ← これが超重要 */
+  align-items: center;
 }
+
+.footer-links {
+  margin-left: auto;          /* 右側へ押し出す */
+  display: flex;              /* 横並び */
+  justify-content: center;    /* 3つを中央寄せ */
+  gap: 30px;                  /* メニュー間の間隔 */
+}
+
 .footer-links a {
+  font-size: 16px;            /* ← 2ポイント大きく */
+  font-weight: bold;
   color: #333;
   text-decoration: none;
-  font-weight: bold;
 }
+
 
   </style>
 </head>
