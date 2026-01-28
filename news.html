@@ -1,165 +1,142 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>通知・活动｜日中文化交流协会</title>
+<meta charset="UTF-8">
+<title>通知・活动｜日中文化交流协会</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-    }
-
-    /* ===== 共通ヘッダー ===== */
-    header {
-      background: #ffffff;          /* 背景を白 */
-      border-bottom: 1px solid #ddd;/* 下に薄い線 */
-    }
-    /* ヘッダー高さを安定させる */
-　.nav-bar {
-  min-height: 120px;   /* ロゴ113pxより少し大きく */
+<style>
+/* ===== 基本 ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
 }
 
-    .nav-bar {
-      display: flex;               /* 横並び */
-      align-items: center;         /* 縦中央揃え */
-      padding: 15px 30px;
-    }
+/* ===== ヘッダー ===== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
 
-    /* ロゴ＋団体名 */
-    .logo-area {
-      display: flex;               /* 横並び */
-      align-items: center;
-    }
+/* ナビ全体 */
+.nav-bar {
+  display: flex;                 /* 横並び固定 */
+  align-items: center;           /* 高さ中央 */
+  padding: 15px 30px;
+  min-height: 120px;             /* 高さ固定 */
+  position: relative;
+  z-index: 1000;
+}
 
-    .logo {
-      height: 113px;               /* 約30mm */
-    }
+/* ロゴ＋団体名 */
+.logo-area {
+  display: flex;
+  align-items: center;
+}
 
-    .org-name {
-      margin-left: 12px;           /* ロゴとの間隔 */
-      line-height: 1.2;
-    }
+.logo {
+  height: 113px;
+}
 
-    .org-top {
-      font-size: 16px;             /* 上段 */
-      font-weight: bold;
-    }
+.org-name {
+  margin-left: 12px;
+  line-height: 1.2;
+}
 
-    .org-bottom {
-      font-size: 26px;             /* 下段 */
-      font-weight: bold;
-    }
+.org-top {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    /* ナビ */
-    nav {
-      margin-left: auto;           /* 右寄せ */
-    }
+.org-bottom {
+  font-size: 28px;
+  font-weight: bold;
+}
 
-    nav a {
-      margin-left: 18px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+/* ===== メニュー ===== */
+nav {
+  margin-left: auto;             /* 右寄せ */
+  display: flex;                 /* 横並び */
+  gap: 18px;                     /* 間隔固定 */
+}
 
-   nav a {
-  margin-left: 18px;
+nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  padding-bottom: 4px;                 /* 下余白を先に確保 */
-  border-bottom: 2px solid transparent;/* 透明の線を常に持たせる */
+  white-space: nowrap;
+  padding-bottom: 4px;           /* 下線用余白固定 */
+  border-bottom: 2px solid transparent;
 }
 
+/* 現在ページ */
 nav a.active {
-  color: #c00000;                      /* 現在ページを赤 */
-  border-bottom: 2px solid #c00000;    /* 線の色だけ変える */
-}
-    /* ===== 見出し画像 ===== */
-    .hero {
-      height: 280px;
-      background: url("./images/top2.jpg") center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding-left: 50px;
-      color: #fff;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    /* ===== 本文 ===== */
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    /* ===== フッター ===== */
-    footer {
-      background: #f5f5f5;
-      padding: 30px;
-      margin-top: 60px;
-      font-size: 14px;
-    }
-
-    .footer-box {
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-    }
-
-    .footer-left img {
-      width: 70px;
-    }
-
-    .footer-info {
-      margin-left: 15px;
-    }
-
-    .footer-links {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 60px;
-    }
-
-    .footer-links a {
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-      text-decoration: none;
-    }
-    /* ===== ナビを安定させる（重要） ===== */
-.nav-bar {
-  display: flex;              /* 横並び固定 */
-  align-items: center;        /* 高さ中央揃え */
-  position: relative;         /* 重なり基準 */
-  z-index: 1000;              /* 最前面 */
+  color: #c00000;
+  border-bottom: 2px solid #c00000;
 }
 
-/* メニュー全体 */
-nav {
-  margin-left: auto;          /* 右寄せ固定 */
-  display: flex;              /* 横並び */
-  gap: 18px;                  /* 間隔固定 */
+/* ===== 見出し画像 ===== */
+.hero {
+  height: 280px;
+  background: url("./images/top2.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-/* 各メニュー */
-nav a {
-  white-space: nowrap;        /* 折り返し防止 */
+/* ===== 本文 ===== */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== フッター ===== */
+footer {
+  background: #f5f5f5;
+  padding: 30px;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+.footer-box {
+  display: flex;
+  align-items: center;
   position: relative;
-  z-index: 1001;              /* クリック有効 */
 }
 
-  </style>
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left img {
+  width: 70px;
+}
+
+.footer-info {
+  margin-left: 15px;
+}
+
+/* フッターメニュー中央固定 */
+.footer-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 60px;
+}
+
+.footer-links a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
@@ -177,13 +154,13 @@ nav a {
     </div>
 
     <nav>
-     <a href="index.html">首页</a>
-     <a href="news.html">团体概要</a>
-     <a href="business.html">主要业务</a>
-  　 <a href="news.html" class="active">通知・活动</a>
-     <a href="join.html">加入会员</a>
-     <a href="news.html">联系我们</a>
-　   <a href="info.html">信息公开</a>
+      <a href="index.html">首页</a>
+      <a href="about.html">团体概要</a>
+      <a href="business.html">主要业务</a>
+      <a href="news.html" class="active">通知・活动</a>
+      <a href="join.html">加入会员</a>
+      <a href="contact.html">联系我们</a>
+      <a href="info.html">信息公开</a>
     </nav>
   </div>
 
@@ -192,7 +169,7 @@ nav a {
 
 <div class="container">
   <h2>通知・活动</h2>
-  <p>这里写团体介绍内容。</p>
+  <p>这里写通知与活动内容。</p>
 </div>
 
 <footer>
@@ -219,4 +196,5 @@ nav a {
 
 </body>
 </html>
+
 
