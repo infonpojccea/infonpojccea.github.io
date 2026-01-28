@@ -37,13 +37,13 @@
       line-height: 1.2;
     }
 
-    .org-top {
-      font-size: 14px;
-      font-weight: bold;
-    }
+ .org-top {
+  font-size: 16px;   /* ← 14 → 16 */
+}
 
-    .org-bottom {
-      font-size: 24px;
+.org-bottom {
+  font-size: 26px;   /* ← 24 → 26 */
+}
       font-weight: bold;
     }
 
@@ -100,12 +100,17 @@
       width: 70px;
     }
 
-    .footer-links a {
-      display: block;
-      margin-bottom: 8px;
-      color: #333;
-      text-decoration: none;
-    }
+   .footer-links {
+  display: flex;
+  gap: 20px;   /* 横の間隔 */
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
   </style>
 </head>
 
@@ -114,7 +119,9 @@
 <header>
   <div class="nav-bar">
     <div class="logo-area">
-      <img src="images/logo.jpg" class="logo" alt="logo">
+     <a href="index.html">
+  <img src="images/logo.jpg" class="logo" alt="logo">
+　</a>
       <div class="org-name">
         <div class="org-top">特定非営利活動法人</div>
         <div class="org-bottom">日中文化交流协会</div>
@@ -144,8 +151,9 @@
 
 <footer>
   <div class="footer-box">
-    <img src="images/logo.jpg" alt="logo">
-
+  <a href="index.html">
+  <img src="images/logo.jpg" alt="logo">
+</a>
     <div>
       <strong>特定非营利活动法人 日中文化交流协会</strong><br>
       日本<br>
