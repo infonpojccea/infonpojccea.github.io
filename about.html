@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <title>团体概要｜日中文化交流协会</title>
 
-  <!-- 共通CSS -->
+  <!-- 共通CSS（ナビ・ヘッダーはすべてここで管理） -->
   <link rel="stylesheet" href="common.css">
 
-  <!-- このページ専用 -->
+  <!-- このページ専用CSSのみ -->
   <style>
-    /* ===== 見出し画像（下層ページ共通）===== */
+    /* ===== 見出し画像（下層ページ用）===== */
     .hero {
-      height: 200px;
+      height: 200px; /* 下層は少し低めで統一 */
       background: url("images/2top.JPG") center / cover no-repeat;
       display: flex;
       align-items: center;
       padding-left: 50px;
       color: #fff;
-      font-size: 30px; /* 少し大きく */
+      font-size: 28px;
       font-weight: bold;
     }
 
@@ -32,6 +32,7 @@
 
 <body class="page">
 
+<!-- ===== ヘッダー ===== -->
 <header class="site-header">
   <div class="nav-bar">
 
@@ -57,17 +58,22 @@
 
   </div>
 
-  <div class="hero">团体概要</div>
+  <!-- 見出し画像 -->
+  <div class="hero">
+    团体概要
+  </div>
 </header>
 
+<!-- ===== 本文 ===== -->
 <main class="container">
   <h2>团体概要</h2>
   <p>
-    本协会以促进中日两国在文化、教育、医疗及福祉领域的交流为宗旨，
-    通过多样化的民间交流活动，推动长期友好合作关系的发展。
+    本协会致力于促进中日两国在文化、教育、医疗及福祉领域的民间交流，
+    通过多元化的活动，加深相互理解，推动可持续的友好合作关系。
   </p>
 </main>
 
+<!-- ===== フッター ===== -->
 <footer>
   <div class="footer-box">
     <div class="footer-left">
@@ -92,4 +98,5 @@
 
 </body>
 </html>
+
 
