@@ -4,143 +4,27 @@
   <meta charset="UTF-8">
   <title>加入会员｜日中文化交流协会</title>
 
+  <!-- 共通CSS（ナビ・文字・hero 高さすべて統一） -->
+  <link rel="stylesheet" href="common.css">
+
+  <!-- このページ専用（最小限） -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-    }
-
-    /* ===== 共通ヘッダー ===== */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #ddd;
-    }
-
-    /* ===== ヘッダー全体（安定版） ===== */
-    .nav-bar {
-      display: flex;
-      align-items: center;
-      padding: 15px 30px;
-      position: relative;
-      z-index: 1000;
-    }
-
-    /* ロゴ＋団体名 */
-    .logo-area {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .logo {
-      height: 113px;
-    }
-
-    .org-name {
-      margin-left: 12px;
-      line-height: 1.2;
-    }
-
-    .org-top {
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .org-bottom {
-      font-size: 26px;
-      font-weight: bold;
-    }
-
-    /* ===== ナビゲーション（完全固定） ===== */
-    nav {
-      margin-left: auto;
-      display: flex;
-      gap: 18px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    nav a.active {
-      color: #c00000;
-      border-bottom: 2px solid #c00000;
-      padding-bottom: 4px;
-    }
-
-    /* ===== 見出し画像 ===== */
     .hero {
-      height: 280px;
       background: url("images/top8.jpg") center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding-left: 50px;
-      color: #fff;
-      font-size: 28px;
-      font-weight: bold;
     }
 
-    /* ===== 本文 ===== */
     .container {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-    }
-
-    /* ===== フッター ===== */
-    footer {
-      background: #f5f5f5;
-      padding: 30px;
-      margin-top: 60px;
-      font-size: 14px;
-    }
-
-    .footer-box {
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    /* 左：ロゴ＋団体情報 */
-    .footer-left {
-      display: flex;
-      align-items: center;
-    }
-
-    .footer-left img {
-      width: 70px;
-      height: auto;
-    }
-
-    .footer-info {
-      margin-left: 15px;
-    }
-
-    /* 中央：フッターメニュー */
-    .footer-links {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 60px;
-    }
-
-    .footer-links a {
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-      text-decoration: none;
     }
   </style>
 </head>
 
 <body class="page">
 
-<header>
+<!-- ===== ヘッダー ===== -->
+<header class="site-header">
   <div class="nav-bar">
 
     <div class="logo-area">
@@ -153,6 +37,7 @@
       </div>
     </div>
 
+    <!-- about / business / contact / info と完全一致 -->
     <nav>
       <a href="index.html">首页</a>
       <a href="about.html">团体概要</a>
@@ -165,17 +50,23 @@
 
   </div>
 
-  <div class="hero">加入会员</div>
+  <!-- 見出し画像 -->
+  <div class="hero">
+    加入会员
+  </div>
 </header>
 
-<div class="container">
+<!-- ===== 本文 ===== -->
+<main class="container">
   <h2>加入会员</h2>
-  <p>这里写内容。</p>
-</div>
+  <p>
+    欢迎加入本协会，与我们一同推动中日文化、教育、医疗及福祉领域的交流与合作。
+  </p>
+</main>
 
+<!-- ===== フッター ===== -->
 <footer>
   <div class="footer-box">
-
     <div class="footer-left">
       <a href="index.html">
         <img src="images/logo.jpg" alt="logo">
@@ -193,12 +84,10 @@
       <a href="contact.html">联系我们</a>
       <a href="news.html">通知・活动</a>
     </div>
-
   </div>
 </footer>
 
 </body>
 </html>
-
 
 
