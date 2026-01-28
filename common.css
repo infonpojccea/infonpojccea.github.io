@@ -104,4 +104,14 @@ img {
   height: auto;
   display: block;
 }
+/* ===== 特定メニューだけ強調 ===== */
+/* 团体概要・通知活动だけ少し大きく・広く */
+
+nav a[href="about.html"],
+nav a[href="news.html"] {
+  font-size: 19px;        /* 他18px → 少しだけ大きく */
+  padding-left: 6px;      /* 左右の余白を追加 */
+  padding-right: 6px;
+}
+
 
