@@ -4,170 +4,167 @@
   <meta charset="UTF-8">
   <title>首页｜日中文化交流协会</title>
   <link rel="stylesheet" href="common.css">
-</head>
 
-<style>
-/* ===== 基本 ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.8;
-}
+  <style>
+  /* ===== 基本 ===== */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+  }
 
-/* ===== ヘッダー ===== */
-header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
-/* ナビ全体 */
-.nav-bar {
-  display: flex;                 /* 横並び固定 */
-  align-items: center;           /* 高さ中央 */
-  padding: 15px 30px;
-  min-height: 120px;             /* 高さ固定 */
-  position: relative;
-  z-index: 1000;
-}
+  /* ===== ヘッダー ===== */
+  header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+  }
 
-/* ロゴ＋団体名 */
-.logo-area {
-  display: flex;
-  align-items: center;
-}
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    min-height: 120px;
+    position: relative;
+    z-index: 1000;
+  }
 
-.logo {
-  height: 113px;
-}
+  .logo-area {
+    display: flex;
+    align-items: center;
+  }
 
-.org-name {
-  margin-left: 12px;
-  line-height: 1.2;
-}
+  .logo {
+    height: 113px;
+  }
 
-.org-top {
-  font-size: 18px;
-  font-weight: bold;
-}
+  .org-name {
+    margin-left: 12px;
+    line-height: 1.2;
+  }
 
-.org-bottom {
-  font-size: 28px;
-  font-weight: bold;
-}
+  .org-top {
+    font-size: 18px;
+    font-weight: bold;
+  }
 
-/* ===== メニュー ===== */
-nav {
-  margin-left: auto;             /* 右寄せ */
-  display: flex;                 /* 横並び */
-  gap: 18px;                     /* 間隔固定 */
-}
+  .org-bottom {
+    font-size: 28px;
+    font-weight: bold;
+  }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  white-space: nowrap;
-  padding-bottom: 4px;           /* 下線用余白固定 */
-  border-bottom: 2px solid transparent;
-}
+  /* ===== メニュー ===== */
+  nav {
+    margin-left: auto;
+    display: flex;
+    gap: 18px;
+  }
 
-/* 現在ページ */
-nav a.active {
-  color: #c00000;
-  border-bottom: 2px solid #c00000;
-}
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
 
-/* ===== 見出し画像 ===== */
-.hero {
-  height: 280px;
-  background: url("./images/top2.jpg") center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding-left: 50px;
-  color: #fff;
-  font-size: 28px;
-  font-weight: bold;
-}
+  nav a.active {
+    color: #c00000;
+    border-bottom: 2px solid #c00000;
+  }
 
-/* ===== 本文 ===== */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
+  /* ===== 見出し画像（100mm） ===== */
+  .hero {
+    height: 378px; /* 100mm */
+    background: url("images/top1.jpg") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+  }
 
-/* ===== フッター ===== */
-footer {
-  background: #f5f5f5;
-  padding: 30px;
-  margin-top: 60px;
-  font-size: 14px;
-}
+  /* ===== セクション ===== */
+  .section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
 
-.footer-box {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
+  .section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-.footer-left {
-  display: flex;
-  align-items: center;
-}
+  .flex {
+    display: flex;
+    gap: 30px;
+  }
 
-.footer-left img {
-  width: 70px;
-}
+  .col-6 {
+    width: 50%;
+  }
 
-.footer-info {
-  margin-left: 15px;
-}
+  .col-4 {
+    width: 33.333%;
+  }
 
-/* フッターメニュー中央固定 */
-.footer-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 60px;
-}
+  /* ===== フッター ===== */
+  footer {
+    background: #f5f5f5;
+    padding: 30px;
+    margin-top: 80px;
+    font-size: 14px;
+  }
 
-.footer-links a {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-  /* ===== 画像の暴走を止める（全ページ共通）===== */
-img {
-  max-width: 100%;
-  height: auto;
-}
-  .container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+  .footer-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
 
+  .footer-box img {
+    width: 70px;
+  }
 
-</style>
+  .footer-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 60px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  </style>
 </head>
 
 <body>
-<header class="site-header">
+
+<header>
   <div class="nav-bar">
-
     <div class="logo-area">
-      <img src="images/logo.jpg" class="logo" alt="ロゴ">
-
+      <img src="images/logo.jpg" class="logo" alt="logo">
       <div class="org-name">
-        <div class="org-top">特定非営利活動法人</div>
-        <div class="org-bottom">日中文化交流協会</div>
+        <div class="org-top">特定非营利活动法人</div>
+        <div class="org-bottom">日中文化交流协会</div>
       </div>
     </div>
 
     <nav>
-     <a href="index.html" class="active">首页</a>
+      <a href="index.html" class="active">首页</a>
       <a href="about.html">团体概要</a>
       <a href="business.html">主要业务</a>
       <a href="news.html">通知・活动</a>
@@ -175,8 +172,10 @@ img {
       <a href="contact.html">联系我们</a>
       <a href="info.html">信息公开</a>
     </nav>
-
   </div>
+
+  <!-- 見出し画像 -->
+  <div class="hero">首页</div>
 </header>
 
 <!-- ===== 设立宗旨 ===== -->
@@ -220,16 +219,16 @@ img {
   </div>
 </div>
 
-<!-- ===== フッター ===== -->
 <footer>
   <div class="footer-box">
     <img src="images/logo.jpg">
-    <div>
+    <div style="margin-left:15px;">
       <strong>特定非营利活动法人 日中文化交流协会</strong><br>
       日本<br>
       邮箱：info.npojccea@gmail.com<br>
       https://www.npojccea.org
     </div>
+
     <div class="footer-links">
       <a href="join.html">入会案内</a>
       <a href="contact.html">联系我们</a>
@@ -240,3 +239,4 @@ img {
 
 </body>
 </html>
+
