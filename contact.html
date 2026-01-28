@@ -13,50 +13,55 @@
 
     /* ===== 共通ヘッダー ===== */
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #ddd;
+      background: #ffffff;          /* 背景を白 */
+      border-bottom: 1px solid #ddd;/* 下に薄い線 */
     }
 
     .nav-bar {
-      display: flex;
-      align-items: center;
+      display: flex;               /* 横並び */
+      align-items: center;         /* 縦中央揃え */
       padding: 15px 30px;
     }
 
+    /* ロゴ＋団体名 */
     .logo-area {
-      display: flex;
+      display: flex;               /* 横並び */
       align-items: center;
     }
 
     .logo {
-      height: 113px; /* 約30mm */
+      height: 113px;               /* 約30mm */
     }
+
     .org-name {
-      margin-left: 12px;
+      margin-left: 12px;           /* ロゴとの間隔 */
       line-height: 1.2;
     }
- .org-top {
-  font-size: 16px;      /* 少し大きく */
-  font-weight: bold;   /* 太字 */
-}
 
-.org-bottom {
-  font-size: 26px;      /* 大きく */
-  font-weight: bold;   /* 太字 */
-}
+    .org-top {
+      font-size: 16px;             /* 上段：少し大きく */
+      font-weight: bold;           /* 太字 */
+    }
+
+    .org-bottom {
+      font-size: 26px;             /* 下段：大きく */
+      font-weight: bold;           /* 太字 */
+    }
+
+    /* ナビゲーション */
     nav {
-      margin-left: auto;
+      margin-left: auto;           /* 右端へ押し出す */
     }
 
     nav a {
-      margin-left: 18px;
+      margin-left: 18px;           /* メニュー間隔 */
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
 
     nav a.active {
-      color: #c00000;
+      color: #c00000;              /* 現在ページを赤 */
       border-bottom: 2px solid #c00000;
     }
 
@@ -87,63 +92,42 @@
       font-size: 14px;
     }
 
-.footer-box {
-  display: flex;
-  align-items: center;
-}
+    .footer-box {
+      display: flex;
+      align-items: center;
+      position: relative;          /* 中央配置の基準 */
+    }
 
-.footer-links {
-  margin-left: auto;          /* 右側へ押し出す */
-  display: flex;              /* 横並び */
-  justify-content: center;    /* 3つを中央寄せ */
-  gap: 60px;                  /* メニュー間の間隔 */
-}
+    /* 左：ロゴ＋団体情報 */
+    .footer-left {
+      display: flex;　　　/* 横並び */
+      align-items: center;
+    }
 
-.footer-links a {
-  font-size: 16px;            /* ← 2ポイント大きく */
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
+    .footer-left img {
+      width: 70px;                 /* ロゴ固定サイズ */
+      height: auto;
+    }
 
-/* ===== フッター全体 ===== */
-.footer-box {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
+    .footer-info {
+      margin-left: 15px;
+    }
 
-/* 左：ロゴ＋団体名 */
-.footer-left {
-  display: flex;
-  align-items: center;
-}
+    /* 中央：メニュー3つ */
+    .footer-links {
+      position: absolute;
+      left: 50%;                   /* 中央基準 */
+      transform: translateX(-50%); /* 完全中央 */
+      display: flex;
+      gap: 60px;                   /* メニュー間隔 */
+    }
 
-.footer-left img {
-  width: 70px;          /* ← ロゴを固定サイズに */
-  height: auto;
-}
-
-.footer-info {
-  margin-left: 15px;
-  font-size: 14px;
-}
-
-/* 中央：メニュー3つ */
-.footer-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 30px;
-}
-
-.footer-links a {
-  font-size: 16px;      /* ← 文字を2pt大きく */
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
+    .footer-links a {
+      font-size: 16px;             /* 文字を大きく */
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
 
   </style>
 </head>
@@ -153,16 +137,16 @@
 <header>
   <div class="nav-bar">
     <div class="logo-area">
-     <a href="index.html">
-  <img src="images/logo.jpg" class="logo" alt="logo">
-　</a>
+      <a href="index.html">
+        <img src="images/logo.jpg" class="logo" alt="logo">
+      </a>
       <div class="org-name">
-        <div class="org-top">特定非営利活動法人</div>
+        <div class="org-top">特定非営利活动法人</div>
         <div class="org-bottom">日中文化交流协会</div>
       </div>
     </div>
 
-  <nav>
+    <nav>
       <a href="index.html">首页</a>
       <a href="about.html">团体概要</a>
       <a href="business.html">主要业务</a>
@@ -171,7 +155,6 @@
       <a href="contact.html" class="active">联系我们</a>
       <a href="info.html">信息公开</a>
     </nav>
-
   </div>
 
   <div class="hero">
@@ -188,7 +171,9 @@
 
     <!-- 左：ロゴ＋団体情報 -->
     <div class="footer-left">
-      <img src="images/logo.jpg" alt="logo">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="logo">
+      </a>
       <div class="footer-info">
         <strong>特定非营利活动法人 日中文化交流协会</strong><br>
         日本<br>
