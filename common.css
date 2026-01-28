@@ -4,18 +4,18 @@
 }
 
 .nav-bar {
+/* ===== ナビ（全ページ共通・広め配置）===== */
+.nav-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  min-height: 120px;
-  box-sizing: border-box;
+  padding: 20px 40px;     /* ← 全体に余裕を出す */
+  min-height: 130px;      /* ← 高さを少し大きく */
 }
 
-.logo-area {
+nav {
+  margin-left: auto;
   display: flex;
-  align-items: center;
-  flex-shrink: 0;
+  gap: 28px;              /* ← メニュー間隔を広げる（重要） */
 }
 
 nav {
@@ -25,10 +25,15 @@ nav {
 }
 
 nav a {
+  font-size: 18px;        /* ← 16px → 18px に */
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
   white-space: nowrap;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-bottom: 2px solid transparent;
 }
+
 
 nav a.active {
   border-bottom: 2px solid #c00000;
