@@ -138,6 +138,22 @@ footer {
   color: #333;
   text-decoration: none;
 }
+  /* ===== クリック不能対策（最重要） ===== */
+header {
+  position: relative;      /* 重なり基準を作る */
+}
+
+.nav-bar {
+  position: relative;
+  z-index: 1000;           /* メニューを最前面 */
+}
+
+.hero {
+  position: relative;
+  z-index: 1;              /* 見出し画像を下に */
+  pointer-events: none;    /* 画像がクリックを邪魔しない */
+}
+
 </style>
 </head>
 
@@ -158,12 +174,13 @@ footer {
 
     <nav>
       <a href="index.html">首页</a>
-      <a href="news.html" class="active">团体概要</a>
-      <a href="business.html">主要业务</a>
-      <a href="about.html">通知・活动</a>
-      <a href="join.html">加入会员</a>
-      <a href="contact.html">联系我们</a>
-      <a href="info.html">信息公开</a>
+　　　<a href="about.html" class="active">团体概要</a>
+　　　<a href="business.html">主要业务</a>
+　　　<a href="news.html">通知・活动</a>
+　　　<a href="join.html">加入会员</a>
+　　　<a href="contact.html">联系我们</a>
+　　　<a href="info.html">信息公开</a>
+
     </nav>
   </div>
 
