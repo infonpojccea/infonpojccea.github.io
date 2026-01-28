@@ -60,11 +60,19 @@
       font-weight: bold;
     }
 
-    nav a.active {
-      color: #c00000;              /* 現在ページ */
-      border-bottom: 2px solid #c00000;
-    }
+   nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 4px;                 /* 下余白を先に確保 */
+  border-bottom: 2px solid transparent;/* 透明の線を常に持たせる */
+}
 
+nav a.active {
+  color: #c00000;                      /* 現在ページを赤 */
+  border-bottom: 2px solid #c00000;    /* 線の色だけ変える */
+}
     /* ===== 見出し画像 ===== */
     .hero {
       height: 280px;
