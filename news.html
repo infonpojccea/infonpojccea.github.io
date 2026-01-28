@@ -137,6 +137,28 @@ nav a.active {
       color: #333;
       text-decoration: none;
     }
+    /* ===== ナビを安定させる（重要） ===== */
+.nav-bar {
+  display: flex;              /* 横並び固定 */
+  align-items: center;        /* 高さ中央揃え */
+  position: relative;         /* 重なり基準 */
+  z-index: 1000;              /* 最前面 */
+}
+
+/* メニュー全体 */
+nav {
+  margin-left: auto;          /* 右寄せ固定 */
+  display: flex;              /* 横並び */
+  gap: 18px;                  /* 間隔固定 */
+}
+
+/* 各メニュー */
+nav a {
+  white-space: nowrap;        /* 折り返し防止 */
+  position: relative;
+  z-index: 1001;              /* クリック有効 */
+}
+
   </style>
 </head>
 
